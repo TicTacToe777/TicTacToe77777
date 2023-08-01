@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+      border-color: #000000;
+      border-style:groove;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+      background-color: #ff8800;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 5px;
+      color: #0400ff;
+      background-color: aqua;
+    }
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      font-size: 40px;
+      border: 2px solid #000000;
+      cursor: pointer;
+      background-color: chartreuse;
+    }
+
+    #message {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #play-again{
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: #ff0000;
+      color: rgb(251, 251, 251);
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      border-style: double;
+      border-color: #490101;
+    }
+    #change-background {
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: #0400ff;
+      color: rgb(251, 251, 251);
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      border-style: double;
+      border-color: #060846;
+    }
+    #facebook-link {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 23px;
+      color: #3b5998;
+      text-decoration: none;
+      border-style: double;
+      border-color:  rgba(12, 102, 144, 0.134);
+      font-style: oblique;
+      background-color: rgba(12, 102, 144, 0.134); 
+    }
+    #roblox-link {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 23px;
+      color: #000000;
+      text-decoration: none;
+      border-style: double;
+      border-color: #ff0000;
+      font-style: oblique;
+      background-color: #ff0000;
+    }
+    #Youtube-link {
+      position: absolute;
+      right: 150px;
+      top: 10px;
+      font-size: 23px;
+      color: #ffffff;
+      text-decoration: none;
+      border-style: double;
+      border-color: #000000;
+      font-style: oblique;
+      background-color: #ff0000;
+    }
+    #Instagram-link{
+      position: absolute;
+      left: 185px;
+      top: 10px;
+      font-size: 23px;
+      color: #ffffff;
+      text-decoration: none;
+      border-style: double;
+      border-color: #8c00ff;
+      font-style: oblique;
+      background-color: #ff00f7;
+    }
+    #Twitter-link{
+      position: absolute;
+      position: center;
+      top: 8px;
+      font-size: 23px;
+      color: #ffffff;
+      text-decoration: none;
+      border-style: double;
+      border-color: #ffffff;
+      font-style: oblique;
+      background-color: #000000;
+      padding: 3px 25px;
+    }
+    #Support1-link{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: 23px;
+      color: #000000;
+      text-decoration: none;
+      border-style: double;
+      border-color: #070d4e;
+      font-style: oblique;
+      background-color: #0015ff;
+      padding: 8px 15px;
+    }
+    #Support2-link {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      font-size: 23px;
+      color: #000000;
+      text-decoration: none;
+      border-style: double;
+      border-color:  #070d4e;
+      font-style: oblique;
+      background-color: #0015ff; 
+      padding: 8px 15px;
+    }
+    #tiktok-link{
+      position: absolute;
+      left: 1035px;
+      top: 10px;
+      font-size: 23px;
+      color: #ffffff;
+      text-decoration: none;
+      border-style: double;
+      border-color: #c7047c;
+      font-style: oblique;
+      background-color: #270505;
+    }
+    #netflix-link{
+      position: absolute;
+      left: 360px;
+      top: 10px;
+      font-size: 23px;
+      color: #ff0000;
+      text-decoration: none;
+      border-style: double;
+      border-color: #ff0000;
+      font-style: oblique;
+      background-color: #000000;
+
+
+
+    }
+  </style>
+</head>
+<body>
+  <a id ="netflix-link"href="https://www.netflix.com"target="_Black">Visit Netflix</a>
+  <a id="tiktok-link"href="https://www.tiktok.com"target="_Black">Visit Tiktok</a>
+  <a id="Support1-link" href="https://www.facebook.com/profile.php?id=100088887255455" target="_blank"> Support1</a>
+  <a id="Support2-link" href="https://www.facebook.com/profile.php?id=100017786291617" target="_blank"> Support2</a>
+  
+  <a id="Youtube-link" href="https://www.Youtube.com" target="_blank">Visit Youtube</a>
+  <a id="Instagram-link" href="https://www.Instagram.com" target="_blank">Visit Instagram</a>
+  <a id="Twitter-link" href="https://www.Twitter.com" target="_blank">Visit X</a>
+
+  <a id="facebook-link" href="https://www.facebook.com" target="_blank">Visit Facebook</a>
+  <a id="roblox-link" href="https://www.roblox.com" target="_blank">Visit   roblox</a>
+  <div class="container">
+    <h1 id="message">Player X's turn</h1>
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <button id="play-again" style="display: none;">დეიწყე თავიდან</button>
+    <button id="change-background">შეცვალე ფონის ფერი ( ;</button>
+  </div>
+  <script>
+    const board = document.getElementById('board');
+    const cells = document.querySelectorAll('.cell');
+    const message = document.getElementById('message');
+    const playAgainButton = document.getElementById('play-again');
+    const changeBackgroundButton = document.getElementById('change-background');
+
+    let currentPlayer = 'X';
+    let gameBoard = ['', '', '', '', '', '', '', '', ''];
+    let gameFinished = false;
+
+    function checkWinner() {
+      const winPatterns = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
+      ];
+
+      for (const pattern of winPatterns) {
+        const [a, b, c] = pattern;
+        if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+          return gameBoard[a];
+        }
+      }
+
+      return null;
+    }
+
+    function updateMessage() {
+      message.textContent = `Player ${currentPlayer}'s turn`;
+    }
+
+    function updateCell(index) {
+      cells[index].textContent = currentPlayer;
+      cells[index].removeEventListener('click', cellClickHandler);
+    }
+
+    function cellClickHandler() {
+      if (gameFinished || this.textContent !== '') return;
+
+      const index = this.dataset.index;
+      gameBoard[index] = currentPlayer;
+      updateCell(index);
+
+      const winner = checkWinner();
+      if (winner) {
+        message.textContent = `Player ${winner} wins!`;
+        playAgainButton.style.display = 'block';
+        gameFinished = true;
+      } else if (gameBoard.every(cell => cell !== '')) {
+        message.textContent = "It's a draw!";
+        playAgainButton.style.display = 'block';
+        gameFinished = true;
+      } else {
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        updateMessage();
+      }
+    }
+
+    function resetGame() {
+      gameBoard = ['', '', '', '', '', '', '', '', ''];
+      currentPlayer = 'X';
+      gameFinished = false;
+      cells.forEach(cell => {
+        cell.textContent = '';
+        cell.addEventListener('click', cellClickHandler);
+      });
+      updateMessage();
+      playAgainButton.style.display = 'none';
+    }
+    function changeBackgroundColor() {
+      const colors = ['#f2f2f2', '#ffeead', '#bde0fe', '#e6d5a8','#000000','#800080	','#FF00FF','#FFD700',
+    '#7FFF00	','#008080	','#0000CD	'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    cells.forEach(cell => cell.addEventListener('click', cellClickHandler));
+    playAgainButton.addEventListener('click', resetGame);
+    changeBackgroundButton.addEventListener('click', changeBackgroundColor);
+
+
+ </script>
+</body>
+</html>
+<style>
